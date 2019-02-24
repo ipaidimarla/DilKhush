@@ -1,0 +1,120 @@
+<div class="card" 
+     *ngIf='product'>
+  <div class='card-header'>
+    {{pageTitle + ': ' + product.productName}}
+  </div>
+
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>Name:</div>
+          <div class='col-md-8'>{{product.productName}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Code:</div>
+          <div class='col-md-8'>{{product.productCode | lowercase }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Description:</div>
+          <div class='col-md-8'>{{product.description}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Availability:</div>
+          <div class='col-md-8'>{{product.releaseDate}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Price:</div>
+          <div class='col-md-8'>{{product.price|currency:'USD':'symbol'}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>5 Star Rating:</div>
+          <div class='col-md-8'>
+            <app-star [rating]='product.starRating'>
+            </app-star>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-4'>
+        <img class='center-block img-responsive zoom'
+             [style.width.px]='200'
+             [style.margin.px]='2'
+             [src]='product.imageUrl'
+             [title]='product.productName'>
+      </div>
+    </div>
+    <button (click) ='toggleShowRecipies()' class='btn btn-info' *ngIf='product.recipies && product.recipies.length' title='there are {{product.recipies.length}} recipies'>
+        {{showRecipies? 'Hide' :'Show'}} Recipies <span class='badge' *ngIf ='!showRecipies'>{{product.recipies.length}} </span>
+    </button> 
+  </div>
+
+  <div class='card' *ngIf='showRecipies'>
+      <div class='card-header'>
+        {{recipieTitle + ': ' + product.productName}}
+      </div>
+    
+      <div class="card-block">
+          <div class="row">
+              <div class="col-lg-3 tags p-b-12">
+                  <ul *ngFor='let recipie of product.recipies' class='list-group'  >
+                      <li class="list-group-item" 
+                        (click)='showRecipieDetails(recipie)' >{{recipie.name}}
+                    </li>
+                    </ul>
+                  
+              </div>
+              <div class="col-lg-2 offset-lg-1" *ngIf='selectedRecipie'>
+                  <iframe [src]='selectedRecipie.url' style ="width:530px; height:650px" frameborder="2"></iframe>
+              </div>
+          </div>
+      </div>
+      
+    
+    
+     
+    
+    
+    </div>
+    
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            (click)='onBack()'
+            style='width:80px'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>
+
+
+ 
+<!--
+ 
+ <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="http://www.dilkhush.com/images/SpicyMangoChutney.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="http://www.dilkhush.com/images/SpicyMangoChutney.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="http://www.dilkhush.com/images/SpicyMangoChutney.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+-->

@@ -1,0 +1,49 @@
+thead{
+    color:#337AB7;
+}
+
+td>ul>li{
+    color:#337AB7;
+}
+
+table th  {
+    text-align: center; 
+ }
+ table tr  {
+    text-align: center; 
+ }
+/* .table > tbody > tr > td {
+    vertical-align: middle;
+} */
+
+
+.circle{		
+    margin-top: 12px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #45B4FE;
+    border-radius: 50%;
+    display: inline-block;
+    /* color: red; */
+    background-color: #cae3f9;
+    cursor: pointer;
+}
+.circle:hover{
+    background-color: #337AB7;
+}
+.circle-plus{
+    position: relative;
+    background-color: #45B4FE;
+    width: 50%;
+    height: 12.5%;
+    left: 25%;
+    top: 43.75%;
+}
+.vertical-plus{
+    position: relative;
+    background-color: #45B4FE;
+    width: 21.5%;
+    height: 399%;
+    left: 40.75%;
+    top: -127.5%;
+}

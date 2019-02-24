@@ -1,0 +1,73 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+
+    <div class='float-right'>
+        <button [routerLink]="['/cart']" type="button" class="btn btn-primary">Cart <span class="badge">{{cartCount}}</span></button>
+        
+      </div>
+  </div>
+  <div class='card-body'>
+ 
+    <form class="form-inline" class='float-left'>
+        <input name="seachfield" [(ngModel)] = 'listFilter' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    <div class='table-responsive'>
+      <table class='table' *ngIf = 'products && products.length'>
+        <thead>
+          <tr>
+            <th>
+              <button (click) ='toggleShowImage()' class='btn btn-outline-info'>
+                {{showImage? 'Hide' :'Show'}} Image
+              </button> 
+            
+            </th>
+            <!-- <th>Product</th> -->
+            
+           
+            <th>Available</th>
+            <th>Price</th>
+            <th>Ratings</th>
+            <th>Add to Cart</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor = 'let product of filteredProducts'>
+            <td class='align-middle' > <img [src] ='product.imageUrl' *ngIf='showImage' [style.width.px]='imageWidth' [style.margin] ='imageMargin' >
+            <div>
+              <a [routerLink] ="['/products', product.productId ]" >{{product.productName}}</a>
+              
+            </div>
+            </td>
+           
+            
+            <td class='align-middle' >{{product.releaseDate}}</td>
+            <td class='align-middle' >{{product.price | currency:'USD' :true:'1.2-2'}}</td>
+            <td class='align-middle' ><app-star [rating]='product.starRating' (ratingClicked) ='onRatingClicked($event)'></app-star></td>
+            <td class='align-middle' >
+              
+                <div class="circle" (click)='addToCart(product)' *ngIf="product.releaseDate == 'In Stock'" title="{{cartCount}} items in the cart">
+                    <div class="circle-plus">
+                      <div class="vertical-plus">	
+                      </div>	
+                    </div>
+                  </div>
+                  <div style="margin-left: 3px" class="circle" (click)='deleteFromCart(product)' *ngIf="product.releaseDate == 'In Stock'" >
+                      <div class="circle-plus">
+                      
+                      </div>
+                    </div>
+                  
+            </td>
+
+
+           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>

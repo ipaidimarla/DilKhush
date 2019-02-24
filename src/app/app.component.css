@@ -1,0 +1,23 @@
+.nav-link {
+  font-size: large;
+}
+.content{
+  width: 90%
+}
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex-item{
+  height:144px;
+  width:164px
+}
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}

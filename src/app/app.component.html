@@ -1,0 +1,94 @@
+<!-- <nav class='navbar navbar-dark bg-dark'>
+
+  <ul class='nav nav-pills'>
+    <li>
+      <a class='nav-link' [routerLink]="['/welcome']">Home</a>
+    </li>
+    <li>
+      <a class='nav-link' [routerLink]="['/products']">Products</a>
+    </li>
+    <li>
+      <a class='nav-link' [routerLink]="['/welcome']">Services</a>
+    </li>
+    <li>
+      <a class='nav-link' [routerLink]="['/welcome']">Location</a>
+    </li>
+    <li>
+      <a class='nav-link' [routerLink]="['/welcome']">CookBook</a>
+    </li>
+    <li>
+      <a class='nav-link' [routerLink]="['/welcome']">Testimonials</a>
+    </li>
+  </ul>
+</nav> -->
+
+<!-- <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">{{pageTitle}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/welcome']">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/products']">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Location</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">CookBook</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Testimonials</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+  <a class="navbar-brand order-1" href="www.dilkhush.com" >{{pageTitle}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/welcome']">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" [routerLink]="['/products']">Products</a>
+      <a class="nav-item nav-link" [routerLink]="['/welcome']">Services</a>
+      <a class="nav-item nav-link " [routerLink]="['/welcome']">Location</a>
+      <a class="nav-item nav-link " [routerLink]="['/welcome']" >CookBook</a>
+
+      <a class="nav-item nav-link " [routerLink]="['/welcome']" >Testimonials</a>
+      <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary">Other Stuff</button>
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+
+      
+    </div>
+  </div>
+</div>
+</nav>
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>

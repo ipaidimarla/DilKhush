@@ -1,0 +1,8 @@
+.list-group-item:hover{
+    background-color: grey !important;
+    cursor: pointer;
+}
+
+ .zoom:hover{
+    transform: scale(1.19)
+} 
