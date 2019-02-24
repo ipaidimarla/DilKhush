@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { ViewCartComponent } from './cart/view-cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CartItemComponent } from './cart/cart-item.component';
     ProductDetailComponent,
     WelcomeComponent,
     ViewCartComponent,
-    CartItemComponent
+    CartItemComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { CartItemComponent } from './cart/cart-item.component';
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'products', component: ProductListComponent},
+      {path: 'services', component: ServicesComponent},
       {path: 'products/:id', component: ProductDetailComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
