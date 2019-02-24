@@ -13,6 +13,8 @@ import { ViewCartComponent } from './cart/view-cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
 import { ServicesComponent } from './services/services.component';
 import { LocationComponent } from './location/location.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { CookBookComponent } from './cook-book/cook-book.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { LocationComponent } from './location/location.component';
     ViewCartComponent,
     CartItemComponent,
     ServicesComponent,
-    LocationComponent
+    LocationComponent,
+    TestimonialsComponent,
+    CookBookComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,8 @@ import { LocationComponent } from './location/location.component';
       {path: 'products', component: ProductListComponent},
       {path: 'services', component: ServicesComponent},
       {path: 'location', component: LocationComponent},
+      {path: 'cookbook', component: CookBookComponent},
+      {path: 'testimonials', component: TestimonialsComponent},
       {path: 'products/:id', component: ProductDetailComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
