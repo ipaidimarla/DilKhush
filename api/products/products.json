@@ -1,0 +1,70 @@
+[
+  {
+    "productId": 1,
+    "productName": "Curry Sauce Masala",
+    "productCode": "GDN-0011",
+    "releaseDate": "In Stock",
+    "description": "Curry Sauce Masala description here.",
+    "price": 4,
+    "starRating": 3.2,
+    "imageUrl": "http://www.dilkhush.com/images/CurrySauceMasala.jpg",
+    "recipies":[
+      {"name": "Aloo Gobi", "url":"http://www.dilkhush.com/recipes/alu_gobi.htm"},
+      {"name": "Red Potato Curry", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Peas & Mushroom Curry", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Baigan Bhartha", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Fish in curry gravy", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Tofu with Red/Green Pepper Curry", "url":"http://www.dilkhush.com/recipes/tufo.htm"}]
+  },
+  {
+    "productId": 2,
+    "productName": "Bombay Masala",
+    "productCode": "GDN-0023",
+    "releaseDate": "In Stock",
+    "description": "Bombay Masala descrption here",
+    "price": 4,
+    "starRating": 4.2,
+    "imageUrl": "http://www.dilkhush.com/images/BombayMasala.jpg",
+    "recipies":[
+      {"name": "Bombay Masala", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Okra in Bombay Masala", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"}
+      ]
+  },
+  {
+    "productId": 5,
+    "productName": "Tandoori Masala",
+    "productCode": "TBX-0048",
+    "releaseDate": "In Stock",
+    "description": "Tandoori Masala Description here",
+    "price": 8.9,
+    "starRating": 4.8,
+    "imageUrl": "http://www.dilkhush.com/images/CurrySauceMasala.jpg",
+    "recipies":[
+      {"name": "Tandoori Masala", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Tandoori Chicken", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Tandoori Chicken Fajitas", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Tandoori Tikka", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"},
+      {"name": "Tandoori Tikka Masala", "url":"http://www.dilkhush.com/recipes/kheemamasala.htm"}
+    ]
+  },
+  {
+    "productId": 8,
+    "productName": "Spicy Mango Chutney",
+    "productCode": "TBX-0022",
+    "releaseDate": "In Stock",
+    "description": "Spicy Mango Chutney description here",
+    "price": 5.99,
+    "starRating": 3.7,
+    "imageUrl": "http://www.dilkhush.com/images/SpicyMangoChutney.jpg"
+  },
+  {
+    "productId": 10,
+    "productName": "Cilantro Mint Chutney",
+    "productCode": "GMG-0042",
+    "releaseDate": "Available Soon",
+    "description": "Cilantro Mint Chutney description here",
+    "price": 4,
+    "starRating": 4.6,
+    "imageUrl": "http://www.dilkhush.com/images/Cilantro_MintChutney.jpg"
+  }
+]
