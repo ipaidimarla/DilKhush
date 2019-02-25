@@ -11,5 +11,8 @@ export class CookBookComponent implements OnInit {
 
   ngOnInit() {
   }
+  handleLoad(event){
+    alert(event.target.href)
+  }
 
 }
